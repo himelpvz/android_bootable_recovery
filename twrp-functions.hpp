@@ -68,6 +68,7 @@ public:
 	static Archive_Type Get_File_Type(string fn);                               // Determines file type, 0 for unknown, 1 for gzip, 2 for OAES encrypted
 	static int Try_Decrypting_File(string fn, string password); // -1 for some error, 0 for failed to decrypt, 1 for decrypted, 3 for decrypted and found gzip format
 	static unsigned long Get_File_Size(const string& Path);                     // Returns the size of a file
+    static bool HasDelimitedWord(const std::string& str, const std::string& word); /* checks if the specified word exists as a standalone, delimited entity in the string */
 	static std::string Remove_Beginning_Slash(const std::string& path);         // Remove the beginning slash of a path
 	static std::string Remove_Trailing_Slashes(const std::string& path, bool leaveLast = false); // Normalizes the path, e.g /data//media/ -> /data/media
 	static void Strip_Quotes(char* &str);                                       // Remove leading & trailing double-quotes from a string
